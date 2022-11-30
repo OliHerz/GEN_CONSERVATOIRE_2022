@@ -1,0 +1,9 @@
+
+.btn{  
+  padding-left: -#{map-get($spaces, s )};
+  padding-right: -#{map-get($spaces, s )};
+  align-items: center;
+  border: solid 1px map-get($colors, secondary);
+  display: flex;
+  width: auto;
+}

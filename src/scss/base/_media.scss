@@ -1,0 +1,32 @@
+img, svg {
+  max-width: 100%;
+  height: auto;
+  }
+
+  .duotone {
+  background-color: map-get($colors, secondary );
+  display: flex;
+  position: relative;
+
+  img {
+      filter: grayscale(100%);
+      mix-blend-mode: multiply;
+      flex: 1 0 100%;   //flex growth =comment tu t'étend au delas d'une certaine taille -shrink = en dessous)
+      object-fit: cover;
+    }
+
+//Regarder le prorpiété de l'élément "&" utilisé ici
+    &::before{
+      content: "";
+      position: absolute; //Positionné en absolut par rapport au dernier élément parent sélectionner 
+      // Avec ces prorpiétés on le positionne au centre 
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: map-get($colors,primary);
+      z-index: 1;
+      mix-blend-mode: lighten;
+    }
+
+  }
