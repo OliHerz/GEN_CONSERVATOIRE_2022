@@ -11,9 +11,8 @@ body {
   background-color: map-get($colors, lightColor);
 }
 
-h1,
-h2 {
-  font-family: map-get($typo, 'mono');
+h1, h2 {
+  font-family: map-get($typo, 'mono' );
   font-weight: normal;
   line-height: 1.1;
 }
@@ -24,12 +23,12 @@ h1 {
 
 h2 {
   font-size: rem(28);
-}
+} 
 
 h3 {
   font-size: rem(18);
   line-height: 1.4;
-}
+} 
 
 button {
   background: none;
