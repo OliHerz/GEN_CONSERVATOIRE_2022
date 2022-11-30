@@ -20,7 +20,8 @@
 
   &__title {
     text-transform: uppercase;
-    font-size: rem(11);
+    @include fluid-type($small);
+    //font-size: rem(11);
     letter-spacing: rem(1);
   }
 
