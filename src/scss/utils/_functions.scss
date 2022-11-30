@@ -1,4 +1,4 @@
-// Fonctions pour convertir les valeurs de px en REM
+// Fonction pour convertir des valeurs de px en rem
 @function rem($pixels) {
-    @return #{ calc($pixels / 16) }rem;
-  }
+  @return #{ calc($pixels / 16) }rem;
+}

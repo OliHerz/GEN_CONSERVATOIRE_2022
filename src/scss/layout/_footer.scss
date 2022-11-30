@@ -1,11 +1,11 @@
 .footer {
-  background-color: map-get($colors, darkColor);
-  color: map-get($colors, lightColor);
-  padding-top: map-get($spaces, 1 );
-  padding-bottom: map-get($spaces, 1 );
+  background-color: map-get($colors , darkColor);
+  color: map-get($colors , lightColor);
+  padding-top: map-get($spaces , m );
+  padding-bottom: map-get($spaces , m );
 
-  a{
-    color: map-get($colors, lightColor);
+  a {
+    color: map-get($colors , lightColor);
     text-decoration: none;
   }
 
@@ -13,12 +13,12 @@
     fill: map-get($colors , lightColor);
   }
 
-  &__list{
+  &__list {
     display: flex;
     gap: 10px;
   }
 
-  &__title{
+  &__title {
     text-transform: uppercase;
     font-size: rem(11);
     letter-spacing: rem(1);
@@ -30,12 +30,13 @@
     }
   }
 
-  & > * {
-    margin-top: map-get($spaces,s);
+  &__gb svg {
+    width: 100px;
   }
 
   & > *:not(:first-child) {
     margin-top: map-get($spaces , s );
   }
+
 
 }

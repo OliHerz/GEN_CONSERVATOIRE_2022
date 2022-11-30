@@ -1,28 +1,24 @@
 .menu {
-    display: none;
-  }
+  display: none;
+}
 
+// Icone Menu Hamburger
 
-//icon Menu Hamburger 
-// Code du block
 .menuBurger {
   width: 30px;
   height: 30px;
-  // background-color: green;
   position: relative;
 
-// Cibler l'élément bar du menu Burger, lest éléments & permet de reprendre est obligatoire
-// puis __bar les tirets du bas sont obgligatoires suivit du nom de la classe 
-&__bar,
-&__bar::before,
-&__bar::after {
-  content: "";
-  background-color: map-get($colors, darkColor);
-  height: 2px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 3;
+  &__bar,
+  &__bar::before,
+  &__bar::after {
+    content: "";
+    background-color: map-get($colors, darkColor);
+    height: 2px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 3;
   }
 
   &__bar::before {
@@ -34,12 +30,3 @@
   }
 
 }
-
-// Code de l'élément du block
-// important de préciser le block, puis avec __ le nom de la classe pour l'affecter
-  //.menuBurger__bar{
-  //  background-color: map-get($colors, darkColor);
-  //}
-
-
-  
