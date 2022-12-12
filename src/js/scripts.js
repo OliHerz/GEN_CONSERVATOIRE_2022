@@ -1,4 +1,5 @@
 import Headroom from "headroom.js";
+import gsap from "gsap";
 
 /*------------------------------------*\
   # AFFICHAGE DU MENU POUR LE MOBILE
@@ -27,3 +28,20 @@ const headroom = new Headroom(navBar, {
   offset: 205,
 });
 headroom.init();
+
+/*------------------------------------*\
+  # ANIMATIONS PATTERN
+\*------------------------------------*/
+
+let lines = document.querySelectorAll(".curveLines path");
+let i = 0;
+if( lines ) {
+  lines.forEach((el) => {
+    gsap.set(el, { strokeDasharray: el.getTotalLength() });
+    gsap.fromTo(el,
+      { strokeDashoffset: el.getTotalLength(), opacity: 0 },
+      { strokeDashoffset: 0, opacity: 1, duration: 1, delay: i/4 + .5 }
+    );
+    i++;
+  });
+}
