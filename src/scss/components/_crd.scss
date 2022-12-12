@@ -3,11 +3,14 @@
 
   &__header {
     padding: 80px 0 104px;
+<<<<<<< HEAD
     @media (min-width: map-get($bp, sm)) {
       grid-column: 6 / span 5;
       grid-row: 1 / span 1;
       z-index: 2;
     }
+=======
+>>>>>>> b8da8288f8497497870ddaf01ef1b9f01ac2e08e
   }
 
   &__title {
@@ -30,6 +33,7 @@
       }
     }
   }
+<<<<<<< HEAD
 
   &__img {
     @media (min-width: map-get($bp, sm)) {
@@ -54,4 +58,6 @@
       grid-row: 2 / span 1;
     }
   }
+=======
+>>>>>>> b8da8288f8497497870ddaf01ef1b9f01ac2e08e
 }
