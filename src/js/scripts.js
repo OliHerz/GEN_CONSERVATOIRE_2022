@@ -1,3 +1,5 @@
+import Headroom from "headroom.js";
+
 /*------------------------------------*\
   # AFFICHAGE DU MENU POUR LE MOBILE
 \*------------------------------------*/
@@ -9,10 +11,19 @@ const page = document.documentElement;
 
 // La fonction permettant de basculer l'affichage en ajoutant/supprimant des classes
 function doToggle() {
-  this.classList.toggle('-open');
-  menu.classList.toggle('-open');
+  this.classList.toggle('menuBurger--open');
+  menu.classList.toggle('menu--open');
   page.classList.toggle('noscroll');
 }
 
 // La fonction doToggle() est appelé lorsqu'on clique sur l'icone de menu
 hamburger.addEventListener('click', doToggle);
+
+/*------------------------------------*\
+  # INIT HEADROOM
+\*------------------------------------*/
+const navBar = document.querySelector(".headroom");
+const headroom = new Headroom(navBar, {
+  offset: 205,
+});
+headroom.init();
