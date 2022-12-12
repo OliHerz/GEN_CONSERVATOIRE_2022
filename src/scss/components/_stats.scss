@@ -1,22 +1,12 @@
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-<<<<<<< HEAD
   gap: map-get($spaces, 'm' );
-=======
-  gap: map-get($spaces, 's');
->>>>>>> b8da8288f8497497870ddaf01ef1b9f01ac2e08e
 
   &__nb {
     @include fluid-type($display-1);
     line-height: 1.1;
-<<<<<<< HEAD
     color: map-get($colors, secondary);
     display: block;
-=======
-    color: map-get($colors,secondary);
-    display: block;
-
->>>>>>> b8da8288f8497497870ddaf01ef1b9f01ac2e08e
   }
 }
