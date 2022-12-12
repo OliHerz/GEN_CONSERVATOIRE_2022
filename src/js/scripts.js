@@ -1,5 +1,6 @@
 import Headroom from "headroom.js";
 import gsap from "gsap";
+import Rellax from "rellax";
 
 /*------------------------------------*\
   # AFFICHAGE DU MENU POUR LE MOBILE
@@ -45,3 +46,9 @@ if( lines ) {
     i++;
   });
 }
+
+/*------------------------------------*\
+  # PARALLAXE
+\*------------------------------------*/
+
+const rellax = new Rellax('.rellax')
