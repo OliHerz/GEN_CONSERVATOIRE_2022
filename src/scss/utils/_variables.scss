@@ -1,4 +1,5 @@
 // Couleurs
+
 $colors: (
   primary:    #1d096b,
   secondary:  #feaa9b,
@@ -11,12 +12,14 @@ $colors: (
 );
 
 // Typographie
+
 $typo: (
   mono: ('Space Mono', monospace),
   sans-serif: ('Mulish', sans-serif)
 );
 
 // Espaces
+
 $spaces: (
   xs: 12px,
   s:  24px,
@@ -28,7 +31,7 @@ $spaces: (
 $bp: (
   sm: 640px,
   md: 960px,
-  lg: 1296px
+  lg: 1500px
 );
 
 // Tailles typographiques
@@ -66,3 +69,13 @@ $display-1: (
   min: 48px,
   max: 64px
 );
+
+// Grille
+$nbCol : 12;
+$gutter: map-get($spaces, m);
+$marginPage: map-get($spaces, s);
+
+// Dimension du conteneur
+$container: calc(#{ map-get($bp, lg) } - #{$marginPage} * 2);
+$colMin: 0;
+$colMax: calc( ( #{$container} - #{$gutter} * (#{$nbCol} - 1) ) / #{$nbCol} );

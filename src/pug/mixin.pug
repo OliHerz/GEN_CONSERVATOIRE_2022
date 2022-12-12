@@ -1,12 +1,12 @@
 mixin card(imgName, imgAlt, title, date, excerpt, link)
-  article.card
-    +duotone(imgName, imgAlt, 800, 384, 250)
-    h3 
-      a(href=`${ link }`)= title
-    div
-      p= date
-      p= excerpt
-      a(href=`${ link }`) Plus d'info
+  article.card(class!=attributes.class)
+    +duotone(imgName, imgAlt, 800, 384, 250)(class="card__img")
+    h3.card__title
+      a.card__titleLink(href=`${ link }`)= title
+    div.card__caption
+      p.card__date= date
+      p.card__excerpt= excerpt
+      a.card__link.moreLink(href=`${ link }`) Plus d'info
 
 mixin duotone(imgName, imgAlt, imgSize, imgWidth, imgHeight)
   picture.duotone(class!=attributes.class)
@@ -21,7 +21,9 @@ mixin btn(btnHref, btnText)
     = btnText
 
 mixin hero(title, chapo, imgName, imgAlt)
-  header 
-    h1= title
-  p= chapo
-  +duotone(imgName, imgAlt)
+  div.grid.hero
+    header.hero__header
+      h1.hero__title= title
+    div.hero__chapo
+      p.hero__text= chapo
+  +duotone(imgName, imgAlt, 2000, 2000, 1000)(class="hero__img")

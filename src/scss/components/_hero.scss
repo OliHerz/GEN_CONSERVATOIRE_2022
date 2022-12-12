@@ -1,15 +1,21 @@
 .hero {
   position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: map-get($spaces, m );
 
   &__header {
     color: map-get($colors , lightColor);
     align-self: end;
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 1 / span 9;
+    }
   }
 
   &__subtitle {
     text-transform: uppercase;
     @include fluid-type($small);
-    //font-size: rem(13);
     letter-spacing: rem(1);
   }
 
@@ -19,6 +25,23 @@
     z-index: -1;
   }
 
+  &__chapo {
+    background-color: map-get($colors , lightColor );
+    display: grid;
+    align-items: center;
+    margin-left: -#{map-get($spaces, s )};
+    margin-right: -#{map-get($spaces, s )};
+    padding: 0 map-get($spaces, s );
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 1 / span 9;
+      margin: 0;
+      padding: 0;
+    }
+  }
 
+  &__text {
+    @include fluid-type($excerpt);
+    line-height: 1.5;
+  }
 
 }
