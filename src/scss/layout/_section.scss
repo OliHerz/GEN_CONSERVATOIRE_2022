@@ -1,6 +1,16 @@
 .section {
   position: relative;
 
+  @media (min-width: map-get($bp, sm)) {
+    &:has(header)::before {
+      content: "";
+      grid-column: 1 / span 2;
+      background-color: map-get($colors, darkColor);
+      height: 1px;
+      margin-top: rem(54);
+    }
+  }
+
   &__header {
     @media (min-width: map-get($bp, sm)) {
       grid-column: 3 / span 6;
@@ -52,6 +62,9 @@
   &.-bg {
     padding-top: 160px;
     padding-bottom: 160px;
+    &:has(header)::before {
+      background-color: map-get($colors, lightColor);
+    }
   }
 
 }
